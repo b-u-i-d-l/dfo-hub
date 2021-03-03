@@ -15,8 +15,6 @@ function Boot() {
         }
     }
     ReactModuleLoader.load({
-        modules: ['spa/' + pathName],
-        scripts: ['spa/globalCatcher.jsx', 'spa/loaderMinimino.jsx'],
         callback : function() {
             React.globalCatcher = function(error) {
                 return React.createElement('GlobalCatcher', {error});
